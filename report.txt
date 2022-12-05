@@ -1,0 +1,36 @@
+Laura Smith 9:25 PM 11/1/22
+
+Lab 8 - 2048 game
+
+Describe, with words, what each member function would do on a high level and potential edge conditions you could run into
+- in the private class I have a variable num, used to track the number on top of each column, the droppingNum, used to keep
+track of what number is being dropped in, and currCol, which is each column of the game. In Public I have the column function,
+a function to check if a column is full, a function to count the total if blocks line up and are added together, and a addNum
+function which will take the input from the user and add the dropping num to the specified column and check if things need to be
+added together. Edge conditions for this would be errors with adding together the numbers, the program not detecting a loss/win
+correctly and just rewriting over a variable. Another edge condition would be detecting a loss as soon as a column is full even
+if there are open spaces for the dropping number to go. 
+
+What are the pros and cons of using classes (OOP) to implement this idea of yours?
+- there are a lot of pros to using OOP in this game, similar to the connect 4 game it makes making the board easier and when needing
+to check for certain conditions each time classes can help. The cons, although few and not that important, is that there might be a
+more efficient way to make the boards and check for wins than using a class. There are many ways to make the board and classes
+aren't the only option. 
+
+
+Describe at least one data structure we have covered so far in 202 that you think would be useful and explain why. Think outside 
+of the box... are the data sparse and therefore could benefit from a map/set? Are vectors alone good enough? Have a rationale 
+for your choice on top of simply it could be useful.
+- Just like the connect 4 lab I belive a set of vectors for each column would be the best. Just like in the connect 4 lab dropped
+numbers go to the bottom and I'll have to check for a win/add each time with the surrounding values. Something like a linked list
+could theoretically also work but having to traverse the list each time to check for win/add conditions would take a long time. 
+
+Using words, what could you provide as test cases (aka make test/gradescript) to make sure your program is working? Would someone
+have to play set games (similar to the Connect4 lab), is there defined behavior (ala the hashing lab), or would would be in a 
+screenshot that would suffice as correct output?
+- The test cases would be very similar to the connect 4 lab, the only variable that would change how it's graded is how the numbers
+are dropped. I could make a vector of a lot of numbers to be dropped and have the order be the same every time or like in the
+blackjack lab, have a "deck" that gets shuffled and dealed each time, where testing had to be playing through the games. A screenshot
+could also show what the user sees and be graded on the presentation of how the board and game looks. So, it would be graded on 
+formatting, commenting, etc of course; if it runs correctly and adds the numbers correctly; correctly determines a win/loss; and 
+the user interface and how it's formatted. 
